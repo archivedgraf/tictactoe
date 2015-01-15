@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.playground.TTT;
+package com.playground.ttt;
 
 import java.awt.Container;
 import java.awt.Dimension;

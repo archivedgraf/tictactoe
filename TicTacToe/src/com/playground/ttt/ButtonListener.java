@@ -1,4 +1,4 @@
-package com.playground.TTT;
+package com.playground.ttt;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

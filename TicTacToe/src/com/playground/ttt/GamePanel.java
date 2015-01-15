@@ -1,4 +1,4 @@
-package com.playground.TTT;
+package com.playground.ttt;
 
 import static java.awt.GridBagConstraints.CENTER;
 import static java.awt.GridBagConstraints.NONE;
