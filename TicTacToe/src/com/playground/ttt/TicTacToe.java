@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.playground.ttt;
 
 import java.awt.Container;
@@ -39,16 +36,30 @@ public class TicTacToe extends JFrame implements Runnable {
 		this.setVisible(true);
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+	private static void checkHeadless() {
 		/*
 		 * Troubleshooting for finding Headless advice from stack overflow:
 		 * https://stackoverflow.com/a/75931990
 		 */
-		System.out.printf("Headless: %s", GraphicsEnvironment.isHeadless());
+		boolean headless = GraphicsEnvironment.isHeadless();
+		if (!headless) return;
+
+		System.out.printf("Headless: %s", headless);
 		System.out.println();
+
+		/*
+		 * Exit gracefully here.
+		 * Advice on exiting: https://www.baeldung.com/java-system-exit
+		 * Advice on codes: https://tldp.org/LDP/abs/html/exitcodes.html
+		 */
+		System.exit(ABORT);
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		checkHeadless();
 		
 		TicTacToe app = new TicTacToe();
 		
