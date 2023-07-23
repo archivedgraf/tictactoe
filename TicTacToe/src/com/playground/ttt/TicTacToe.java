@@ -6,6 +6,7 @@ package com.playground.ttt;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.GraphicsEnvironment;
 import java.util.Calendar;
 
 import javax.swing.JFrame;
@@ -42,6 +43,13 @@ public class TicTacToe extends JFrame implements Runnable {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*
+		 * Troubleshooting for finding Headless advice from stack overflow:
+		 * https://stackoverflow.com/a/75931990
+		 */
+		System.out.printf("Headless: %s", GraphicsEnvironment.isHeadless());
+		System.out.println();
+		
 		TicTacToe app = new TicTacToe();
 		
 		EventQueue.invokeLater(app);
